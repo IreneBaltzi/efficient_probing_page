@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="Attention, Please! Revisiting Attentive Probing Through the Lens of Efficiency - Bill Psomas, Dionysis Christopoulos, Eirini Baltzi,
+Ioannis Kakogeorgiou, Tilemachos Aravanis, Nikos Komodakis, Konstantinos Karantzalos, Yannis Avrithis, Giorgos Tolias">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Bill Psomas, Dionysis Christopoulos">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+
+
+  <main id="main-content">
+  <section class="hero hero-ep reveal">
+    <div class="hero-body">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered reveal delay-1">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">Attention, Please! Revisiting Attentive Probing Through the Lens of Efficiency</h1>
+            <div class="is-size-5 publication-authors reveal delay-2">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="http://users.ntua.gr/psomasbill/" target="_blank">Bill Psomas</a><sup>1*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/dionysischr/" target="_blank">Dionysis Chistopoulos</a><sup>2*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://www.linkedin.com/in/eirini-baltzi/" target="_blank">Eirini Baltzi</a><sup>2</sup>,</span>
+                  </span class="author-block">
+                    <a href="https://users.iit.demokritos.gr/~i.kakogeorgiou/" target="_blank">Ioannis Kakogeorgiou</a><sup>4,7</sup>,</span>
+                  </span class="author-block">
+                    <a href="https://www.linkedin.com/in/tilemachos-aravanis-b13044307/?originalSubdomain=gr" target="_blank">Tilemachos Aravanis</a><sup>1</sup>,</span>
+                  </span class="author-block">
+                    <a href="https://www.csd.uoc.gr/~komod/" target="_blank">Nikos Komodakis</a><sup>3,4,5</sup>,</span>
+                  </span class="author-block">
+                    <a href="http://users.ntua.gr/karank/" target="_blank">Konstantinos Karantzalos</a><sup>2</sup>,</span>
+                  </span class="author-block">
+                    <a href="https://avrithis.net/" target="_blank">Yannis Avrithis</a><sup>6</sup>,</span>
+                  </span class="author-block">
+                    <a href="https://cmp.felk.cvut.cz/~toliageo/" target="_blank">Giorgos Tolias</a><sup>1</sup></span>
+
+                  </div>
+
+                  <div class="is-size-5 publication-authors reveal delay-3">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                      <span class="author-block">
+                        <sup>1</sup> VRG, FEE, Czech Technical University in Prague
+                      </span><br>
+
+                      <span class="author-block">
+                        <sup>2</sup> National Technical University of Athens
+                      </span>
+
+                      <span class="author-block">
+                        <sup>3</sup> University of Crete
+                      </span>
+
+                      <span class="author-block">
+                        <sup>4</sup> Archimedes, Athena RC
+                      </span>
+
+                      <span class="author-block">
+                        <sup>5</sup> IACM-FORTH
+                      </span>
+
+                      <span class="author-block">
+                        <sup>6</sup> IARAI
+                      </span>
+
+                      <span class="author-block">
+                        <sup>7</sup> IIT, NCSR "Demokritos"
+                      </span>
+
+                      <br><br>
+                      <span><small><sup>*</sup> Equal Contribution</small></span>
+                  </div>
+
+
+                  <div class="column has-text-centered reveal delay-4">
+                <div class="publication-icons">
+
+                  <a href="https://github.com/billpsomas/efficient-probing"
+                    target="_blank"
+                    class="pub-icon github"
+                    title="Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>"
+                    target="_blank"
+                    class="pub-icon arxiv"
+                    title="Paper">
+                    <i class="ai ai-arxiv"></i>
+                  </a>
+
+                  <a href="static/pdfs/poster.pdf"
+                    target="_blank"
+                    class="pub-icon poster"
+                    title="Poster">
+                    <i class="fas fa-image"></i>
+                  </a>
+
+                  <a href="static/pdfs/presentation.pdf"
+                    target="_blank"
+                    class="pub-icon presentation"
+                    title="Presentation">
+                    <i class="fas fa-video"></i>
+                  </a>
+
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser reveal">
+  <div class="hero-body">
+    <div class="container" style="max-width: 1400px;">
+      <video autoplay controls muted loop style="width: 100%;">
+        <source src="static/videos/ep.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light reveal">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths reveal delay-1">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified reveal delay-2">
+          <!-- TODO: Replace with your paper abstract -->
+          <p id="abstract-text" class="typewriter-text">As fine-tuning becomes impractical at scale, probing is emerging as the preferred evaluation protocol. However, standard linear probing can understate the capability of models whose pre-training optimizes local representations rather than an explicit global representation. This motivates attentive probing, an alternative that uses attention to selectively aggregate patch-level features. Despite growing adoption, attentive probing is still underexplored: existing approaches are often over-parameterized and computationally inefficient. In this work, we revisit attentive probing through the lens of the accuracy vs parameter-efficiency trade-off. We present the first comprehensive study of existing methods, analyzing their design choices and benchmarking their performance. Building on these insights, we propose efficient probing (EP), a lightweight yet effective multi-query cross-attention mechanism that eliminates redundant projections and reduces the number of trainable parameters. Across multiple benchmarks and pre-training paradigms, EP consistently outperforms linear probing and previous attentive probing methods, and remains effective when combined with parameter-efficient fine-tuning. Beyond evaluation, our analysis uncovers emerging properties of EP, including complementary attention maps, which open new directions for leveraging probing beyond protocol design.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section reveal">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered reveal delay-1">
+      Pre-training Paradigms: Global vs Local Representations
+    </h2>
+
+    <div class="content has-text-centered reveal delay-2" style="max-width: 800px; margin: auto;">
+      <p>
+        Modern vision encoders are trained under different pre-training families.
+        Some promote global semantic aggregation, while others preserve rich local spatial structure.
+      </p>
+    </div>
+
+    <!-- Toggle Buttons -->
+    <div class="buttons is-centered reveal delay-3" style="margin-top: 20px;">
+      <button id="btn-global" class="button is-dark"
+              onclick="showParadigm('global')">
+        Global Pre-training
+      </button>
+      <button id="btn-local" class="button is-light"
+              onclick="showParadigm('local')">
+        Local (MIM) Pre-training
+      </button>
+    </div>
+
+    <!-- Image Container -->
+    <div class="has-text-centered reveal delay-4" style="margin-top: 30px;">
+      <img id="paradigm-image"
+        src="static/images/global.png"
+        style="max-width: 700px; width: 100%; transition: opacity 0.4s ease; opacity: 1;">
+    </div>
+
+    <!-- Description -->
+    <div class="content has-text-centered" style="max-width: 750px; margin: 20px auto;">
+      <p id="paradigm-text">
+        Global-style pre-training (e.g., CLIP) encourages aggregation of information into a single representation.
+        Evaluation protocols commonly rely on global pooling.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section-band section-band-light reveal">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered reveal delay-1">
+      Evaluation Protocols: From Global Bias to Spatial Awareness
+    </h2>
+
+    <p class="has-text-centered reveal delay-2" style="max-width: 800px; margin: auto;">
+      Most evaluation protocols for classification rely on a single global representation —
+      even when pre-training promotes spatially distributed local semantics.
+    </p>
+
+    <!-- Toggle Buttons -->
+    <div class="buttons is-centered reveal delay-3" style="margin-top: 25px;">
+      <button id="btn-knn" class="button is-dark"
+              onclick="showProtocol('knn')">k-NN</button>
+
+      <button id="btn-lp" class="button is-light"
+              onclick="showProtocol('lp')">Linear Probing</button>
+
+      <button id="btn-ft" class="button is-light"
+              onclick="showProtocol('ft')">Fine-tuning</button>
+
+      <button id="btn-ap" class="button is-primary is-medium"
+              onclick="showProtocol('ap')">
+              Attentive Probing
+      </button>
+    </div>
+
+    <!-- Image -->
+    <div class="has-text-centered reveal delay-4" style="margin-top: 30px;">
+      <img id="protocol-image"
+           src="static/images/knn.png"
+           style="max-width: 650px; width: 100%; transition: opacity 0.4s ease;">
+    </div>
+
+    <!-- Description -->
+    <div id="protocol-text"
+        class="content has-text-centered"
+        style="max-width: 850px; margin: 20px auto;">
+      <p>
+        k-NN uses the global image representation for similarity computation.
+      </p>
+    </div>
+    
+    <h3 id="protocol-question"
+    class="has-text-centered"
+    style="margin-top: 40px; font-weight: 600; display: none;">
+    </h3>
+
+  </div>
+</section>
+
+
+<section class="section is-light reveal ">
+  <div class="container is-max-desktop">
+
+    <!-- Section Title -->
+    <h2 class="title is-3 has-text-centered reveal delay-1">
+      The Landscape of Attentive Probing Methods
+    </h2>
+
+    <!-- Framing Text -->
+    <p class="has-text-centered reveal delay-2" style="max-width: 850px; margin: auto;">
+      Attentive probing has emerged in multiple forms across literature.
+      However, these methods differ substantially in query design,
+      key/value transformations, attention mechanisms, and pooling strategies.
+      To our knowledge, no unified comparison of this design space has been conducted.
+    </p>
+
+    <!-- Table -->
+    <div class="has-text-centered reveal delay-3" style="margin-top: 40px;">
+      <img src="static/images/attentive_probing_table.png"
+           alt="Comparison of Attentive Probing Methods"
+           style="max-width: 100%; width: 100%; border-radius: 8px;">
+    </div>
+
+    <!-- Interpretation -->
+    <div class="content reveal delay-4" style="max-width: 850px; margin: 30px auto;">
+      <ul>
+        <li><strong>Query Source:</strong> learned vectors, input-dependent queries, or pooled features.</li>
+        <li><strong>Transformations:</strong> projection-heavy vs projection-free designs.</li>
+        <li><strong>Pooling Strategy:</strong> weighted aggregation vs learned transformations.</li>
+      </ul>
+    </div>
+
+    <!-- Key Insight -->
+    <div class="content has-text-centered"
+         style="max-width: 850px; margin: 40px auto;">
+      <p style="font-weight: 500;">
+        Many existing attentive probing approaches introduce redundant projections
+        and unnecessary parameter overhead.
+      </p>
+
+      <p>
+        This motivates revisiting attentive probing through the lens of
+        <strong>accuracy versus efficiency</strong>.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- Step 5: MHCA -> Efficient Probing -->
+<!-- ===================================================== -->
+
+<section class="section is-light reveal">
+  <div class="container" style="max-width: 1200px;">
+
+    <h2 class="title is-3 has-text-centered reveal delay-1">
+      From Vanilla MHCA to Efficient Probing (EP)
+    </h2>
+
+    <div class="content has-text-centered" style="max-width: 850px; margin: 0 auto 30px;">
+      <p>
+        Efficient Probing revisits multi-head cross-attention under the lens of
+        <b>accuracy vs parameter-efficiency</b>.
+        We simplify the architecture while preserving expressiveness.
+      </p>
+    </div>
+
+    <div class="columns is-vcentered reveal delay-2">
+
+      <!-- ================= MHCA ================= -->
+      <div class="column has-text-centered reveal-left">
+
+        <h3 class="title is-5">Vanilla Multi-Head Cross Attention</h3>
+
+        <img src="static/images/mhca.png"
+             style="max-width: 100%; border-radius: 10px;">
+
+        <div class="content" style="margin-top: 20px;">
+          <p>
+            • Learn <b>W<sub>Q</sub></b>, <b>W<sub>K</sub></b>, and <b>W<sub>V</sub></b><br>
+            • Multiple projection matrices<br>
+            • Higher parameter cost<br>
+            • Redundant transformations
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ================= EP ================= -->
+      <div class="column has-text-centered reveal-right"
+           style="background-color: #f0f7ff; border-radius: 16px; padding: 20px;">
+
+        <h3 class="title is-5 has-text-primary">
+          Efficient Probing (EP)
+        </h3>
+
+        <img src="static/images/ep.png"
+             style="max-width: 100%; border-radius: 10px;">
+
+        <div class="content" style="margin-top: 20px;">
+          <p>
+            • Remove <b>W<sub>Q</sub></b><br>
+            • Simplify <b>W<sub>K</sub></b><br>
+            • Learn <b>M queries directly in feature space</b><br>
+            • Fewer parameters, same or better accuracy
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= Key Insight ================= -->
+
+    <div class="content has-text-centered"
+         style="max-width: 850px; margin: 40px auto 20px;">
+      <p>
+        EP removes redundant projections and learns
+        <b>multiple query vectors directly in the encoder feature space</b>.
+        This drastically reduces trainable parameters while preserving expressive
+        cross-attention over spatial tokens.
+      </p>
+    </div>
+
+    <div class="notification is-info is-light has-text-centered"
+         style="max-width: 850px; margin: auto;">
+      <b>Key Insight:</b><br>
+      Efficient probing is not about adding more attention —
+      it is about removing unnecessary projections.
+    </div>
+
+  </div>
+</section>
+
+<!-- EP Query Attention Visualization -->
+<section class="section-band section-band-light reveal">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered reveal delay-1">
+      Multi-Query Efficient Probing (EP)
+    </h2>
+
+    <p class="has-text-centered" style="max-width: 800px; margin: auto;">
+      Each query learns complementary spatial patterns.
+      Hover over a query to isolate its attention region.
+    </p>
+
+    <!-- Image Container -->
+    <div class="ep-container reveal delay-2" style="margin-top: 30px;">
+      <img src="static/images/ep8_birds.png" class="base-image">
+      <img id="maskOverlay" class="mask-overlay">
+    </div>
+
+    <!-- Legend -->
+    <div class="ep-legend has-text-centered" style="margin-top: 25px;">
+
+      <span class="ep-dot" style="background:rgb(247,237,123);"
+            onmouseover="showQuery(1)" onmouseout="clearQuery()">Q1</span>
+
+      <span class="ep-dot" style="background:rgb(244,181,110);"
+            onmouseover="showQuery(2)" onmouseout="clearQuery()">Q2</span>
+
+      <span class="ep-dot" style="background:rgb(239,115,115);"
+            onmouseover="showQuery(3)" onmouseout="clearQuery()">Q3</span>
+
+      <span class="ep-dot" style="background:rgb(125,164,242);"
+            onmouseover="showQuery(4)" onmouseout="clearQuery()">Q4</span>
+
+      <span class="ep-dot" style="background:rgb(135,224,242);"
+            onmouseover="showQuery(5)" onmouseout="clearQuery()">Q5</span>
+
+      <span class="ep-dot" style="background:rgb(124,239,143);"
+            onmouseover="showQuery(6)" onmouseout="clearQuery()">Q6</span>
+
+      <span class="ep-dot" style="background:rgb(195,137,237);"
+            onmouseover="showQuery(7)" onmouseout="clearQuery()">Q7</span>
+
+      <span class="ep-dot" style="background:rgb(244,146,195);"
+            onmouseover="showQuery(8)" onmouseout="clearQuery()">Q8</span>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- Accuracy vs Parameters Interactive Section -->
+<!-- ===================================================== -->
+
+<section class="section is-light reveal">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered reveal delay-1">
+      Accuracy vs Parameters
+    </h2>
+
+    <p class="has-text-centered" style="max-width: 750px; margin: auto;">
+      Explore the accuracy-efficiency trade-off across models, backbone sizes and downstream datasets. 
+    </p>
+
+    <!-- Dropdowns -->
+    <div class="columns is-centered reveal delay-2" style="margin-top:30px;">
+
+      <div class="column is-4">
+        <div class="field">
+          <label class="label">Model</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select id="modelSelect" onchange="updateSizes()">
+                <option value="">Select Model</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-4">
+        <div class="field">
+          <label class="label">Size</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select id="sizeSelect" onchange="updateDatasets()" disabled>
+                <option value="">Select Size</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-4">
+        <div class="field">
+          <label class="label">Dataset</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select id="datasetSelect" onchange="updatePlot()" disabled>
+                <option value="">Select Dataset</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Plot Display -->
+    <div class="has-text-centered reveal delay-3" style="margin-top:40px;">
+      <img id="accuracyPlot"
+           src=""
+           style="max-width: 100%; border-radius: 10px; display:none;">
+    </div>
+
+  </div>
+</section>
+
+<section class="section-band section-band-light reveal" style="padding-top:80px; padding-bottom:80px;">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered reveal delay-1">
+      A New Dominant Efficiency Frontier
+    </h2>
+
+    <p class="has-text-centered"
+       style="max-width: 850px; margin: 30px auto; font-size: 1.1rem;">
+      We compare Efficient Probing (EP) against more than 40 LoRA variants,
+      BitFit, and LayerNorm tuning on a frozen MAE ViT-B/16 backbone.
+      The result is not just competitive performance —
+      it is a <b>strictly better accuracy–parameter trade-off</b>.
+    </p>
+
+    <!-- Plot -->
+    <div class="has-text-centered reveal delay-2" style="margin-top: 40px;">
+      <img src="static/images/lora_plot.png"
+           alt="LoRA vs Efficient Probing Pareto Comparison"
+           class="lora-plot"
+           style="max-width: 100%; border-radius: 12px;">
+    </div>
+
+    <!-- Key Highlights -->
+    <div class="content reveal delay-3"
+         style="max-width: 850px; margin: 40px auto; font-size: 1.05rem;">
+
+      <ul>
+        <li>
+          Single-layer LoRA improves over linear probing,
+          but remains <b>dominated by EP</b> in the accuracy–parameter plane.
+        </li>
+
+        <li>
+          All-layer LoRA achieves higher accuracy,
+          but requires substantially more parameters and
+          modifies the representation more aggressively.
+        </li>
+
+        <li>
+          The hybrid <b>LoRA + EP</b> configurations form a
+          <b>new dominant Pareto frontier</b>,
+          strictly improving over both pure EP and pure LoRA.
+        </li>
+      </ul>
+
+      <div class="notification is-primary is-light has-text-centered"
+           style="margin-top: 40px; font-size: 1.1rem;">
+        <b>850K parameters → 76.99% top-1 accuracy</b><br>
+        Better than both pure EP and pure LoRA — using fewer parameters.
+      </div>
+
+      <p class="has-text-centered" style="margin-top: 40px; font-weight: 600;">
+        Efficient Probing is not redundant with PEFT.
+        It is complementary.
+      </p>
+
+      <p class="has-text-centered">
+        LoRA adapts the representation.
+        EP selectively aggregates it.
+        Together, they define a new regime of parameter-efficient learning.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Paper poster -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <!-- TODO: Replace with your poster PDF -->
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+  title={Your Paper Title Here},
+  author={First Author and Second Author and Third Author},
+  journal={Conference/Journal Name},
+  year={2024},
+  url={https://your-domain.com/your-project-page}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Institutions -->
+<section class="section-band section-band-soft">
+  <div class="container is-max-desktop has-text-centered">
+
+    <h2 class="title is-4 section-title">
+      Institutions & Collaborations
+    </h2>
+
+    <div class="bottom-logos">
+            <img src="static/images/cvut.jpg">
+            <img src="static/images/ntua.png">
+            <img src="static/images/forth.png">
+            <img src="static/images/logo_en.svg">
+            <img src="static/images/ncsr.png">
+            <img src="static/images/logo-part-universityofcrete.png">
+            <img src="static/images/iarai.jpg">
+    </div>
+
+  </div>
+</section>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+<script>
+
+function showQuery(q) {
+  const mask = document.getElementById("maskOverlay");
+  mask.src = `static/images/ep8_masks/ep8_q${q}.png`;
+  mask.style.opacity = 1;
+
+  mask.classList.add("flash");
+}
+
+function clearQuery() {
+  const mask = document.getElementById("maskOverlay");
+
+  mask.classList.remove("flash");   // ← STOP animation
+  mask.style.opacity = 0;           // ← hide mask
+}
+
+</script>
+
+
+</body>
+<!-- Sticky Icon Bar -->
+<div class="sticky-bar">
+  <div class="sticky-icons">
+
+    <!-- REPLACE YOUR OLD ICON LINKS WITH THIS -->
+
+    <a href="https://github.com/billpsomas/efficient-probing"
+       target="_blank"
+       class="sticky-icon github"
+       title="Code">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>"
+       target="_blank"
+       class="sticky-icon arxiv"
+       title="Paper">
+      <i class="ai ai-arxiv"></i>
+    </a>
+
+    <a href="static/pdfs/poster.pdf"
+       target="_blank"
+       class="sticky-icon poster"
+       title="Poster">
+      <i class="fas fa-image"></i>
+    </a>
+
+    <a href="static/pdfs/presentation.pdf"
+       target="_blank"
+       class="sticky-icon presentation"
+       title="Presentation">
+      <i class="fas fa-video"></i>
+    </a>
+
+  </div>
+</div>
+
+
+</html>
