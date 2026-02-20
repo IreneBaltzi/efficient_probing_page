@@ -273,14 +273,14 @@ Ioannis Kakogeorgiou, Tilemachos Aravanis, Nikos Komodakis, Konstantinos Karantz
                     <i class="ai ai-arxiv"></i>
                   </a>
 
-                  <a href="static/pdfs/poster.pdf"
+                  <a onclick="comingSoon('Poster')"
                     target="_blank"
                     class="pub-icon poster"
                     title="Poster">
                     <i class="fas fa-image"></i>
                   </a>
 
-                  <a href="static/pdfs/presentation.pdf"
+                  <a onclick="comingSoon('Presentation')"
                     target="_blank"
                     class="pub-icon presentation"
                     title="Presentation">
@@ -749,9 +749,6 @@ Ioannis Kakogeorgiou, Tilemachos Aravanis, Nikos Komodakis, Konstantinos Karantz
   </div>
 </section>
 
-<!-- ===================================================== -->
-<!-- Get in Touch Section -->
-<!-- ===================================================== -->
 
 <!-- ===================================================== -->
 <!-- Get in Touch Section -->
@@ -867,8 +864,29 @@ function clearQuery() {
 
 </script>
 
+<!-- Coming Soon Modal -->
+<div id="comingSoonModal" class="coming-soon-modal">
+  <div class="coming-soon-box">
+    <p id="comingSoonText"></p>
+    <button onclick="closeComingSoon()">Close</button>
+  </div>
+</div>
 
-</body>
+
+<script>
+function comingSoon(type) {
+  const modal = document.getElementById("comingSoonModal");
+  const text = document.getElementById("comingSoonText");
+
+  text.innerHTML = type + " will be available soon.";
+  modal.style.display = "flex";
+}
+
+function closeComingSoon() {
+  document.getElementById("comingSoonModal").style.display = "none";
+}
+</script>
+
 <!-- Sticky Icon Bar -->
 <div class="sticky-bar">
   <div class="sticky-icons">
@@ -889,22 +907,22 @@ function clearQuery() {
       <i class="ai ai-arxiv"></i>
     </a>
 
-    <a href="static/pdfs/poster.pdf"
-       target="_blank"
-       class="sticky-icon poster"
-       title="Poster">
+    <a onclick="comingSoon('Poster')"
+      class="sticky-icon poster"
+      title="Poster">
       <i class="fas fa-image"></i>
     </a>
 
-    <a href="static/pdfs/presentation.pdf"
-       target="_blank"
-       class="sticky-icon presentation"
-       title="Presentation">
+    <a onclick="comingSoon('Presentation')"
+      class="sticky-icon presentation"
+      title="Presentation">
       <i class="fas fa-video"></i>
     </a>
 
   </div>
 </div>
 
+
+</body>
 
 </html>

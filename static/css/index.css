@@ -1276,3 +1276,33 @@ a:focus {
   transform: scale(1.25);
   filter: brightness(1.1);
 }
+
+
+.coming-soon-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.coming-soon-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.coming-soon-box button {
+  margin-top: 20px;
+  padding: 8px 18px;
+  border: none;
+  background: #ff4fa3;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
